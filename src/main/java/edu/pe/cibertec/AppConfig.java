@@ -26,7 +26,6 @@ public class AppConfig {
         return new DocumentoTexto();
     }
 
-
     @Bean
     public ImpresoraService impresoraServiceBean (){
         return new ImpresoraService();

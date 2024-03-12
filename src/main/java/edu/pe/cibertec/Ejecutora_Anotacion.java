@@ -1,5 +1,6 @@
 package edu.pe.cibertec;
 
+import edu.pe.cibertec.beans.DocumentoExcel;
 import edu.pe.cibertec.beans.HolaMundo;
 import edu.pe.cibertec.beans.Imprimible;
 import edu.pe.cibertec.service.ImpresoraService;
@@ -17,6 +18,10 @@ public class Ejecutora_Anotacion {
 
         ImpresoraService impresoraService = (ImpresoraService) context.getBean("impresoraServiceBean");
         impresoraService.imprimirDocumento();
+
+        impresoraService.setDocumento((DocumentoExcel) context.getBean("documentoExcelBean"));
+        impresoraService.imprimirDocumento();
+
 
         ((ConfigurableApplicationContext) context).close();
 
