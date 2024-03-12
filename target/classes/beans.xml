@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="holaMundoBean" class="edu.pe.cibertec.beans.HolaMundo">
+        <property name="nombre" value="alumnos Backend desde XML"/>
+        <property name="edad" value="38"/>
+    </bean>
+
+    <bean id="documentoExcelBean" class="edu.pe.cibertec.beans.DocumentoExcel" />
+    <bean id="documentoTextoBean" class="edu.pe.cibertec.beans.DocumentoTexto" />
+
+    <bean id="impresoraServiceBean" class="edu.pe.cibertec.service.ImpresoraService">
+        <property name="documento" ref="documentoExcelBean" />
+    </bean>
+
+</beans>
